@@ -111,6 +111,7 @@ abstract class AbstractLinkshareApi extends AbstractApi
      * Get the OAuth provider.
      *
      * @param array $options
+     *
      * @return AbstractProvider
      */
     public function getProvider(array $options = [])
@@ -160,15 +161,18 @@ abstract class AbstractLinkshareApi extends AbstractApi
      * Use ScopedPassword as the default grant.
      *
      * @see AbstractApi::getAccessToken()
+     *
      * @param AbstractGrant|null $grant
-     * @param array $options
-     * @return AccessToken
+     * @param array              $options
+     *
      * @throws MissingFieldException
+     *
+     * @return AccessToken
      */
     public function getAccessToken(AbstractGrant $grant = null, array $options = [])
     {
         if ($grant === null) {
-            $grant = new ScopedPassword;
+            $grant = new ScopedPassword();
         }
 
         if ($options === []) {
@@ -188,10 +192,12 @@ abstract class AbstractLinkshareApi extends AbstractApi
      * Throws an exception if something goes wrong.
      *
      * @param string $method
-     * @param array $options
-     * @return array|string
+     * @param array  $options
+     *
      * @throws LinkshareApiAuthorizationException
      * @throws ResourceUnavailableException
+     *
+     * @return array|string
      */
     public function get($method = 'GET', array $options = [])
     {
@@ -234,6 +240,7 @@ abstract class AbstractLinkshareApi extends AbstractApi
      *
      * @param $parameter
      * @param $value
+     *
      * @return $this
      */
     protected function setParameter($parameter, $value)
@@ -241,7 +248,7 @@ abstract class AbstractLinkshareApi extends AbstractApi
         if ($value === null) {
             if (is_string($parameter)) {
                 unset($this->data[$parameter]);
-            } elseif (is_integer($parameter)) {
+            } elseif (is_int($parameter)) {
                 $this->data[$parameter] = null;
             }
         } else {

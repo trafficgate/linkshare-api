@@ -12,6 +12,7 @@ interface ApiInterface
      * Get the OAuth provider.
      *
      * @param array $options
+     *
      * @return AbstractProvider
      */
     public function getProvider(array $options = []);
@@ -43,6 +44,7 @@ interface ApiInterface
      * Get the API url.
      *
      * This should return the fully constructed url for the API request.
+     *
      * @return mixed
      */
     public function getApiUrl();
@@ -55,7 +57,8 @@ interface ApiInterface
      * In the event of an error, throw an exception.
      *
      * @param AbstractGrant $grant
-     * @param array $options
+     * @param array         $options
+     *
      * @return AccessToken
      */
     public function getAccessToken(AbstractGrant $grant = null, array $options = []);

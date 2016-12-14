@@ -107,10 +107,12 @@ abstract class AbstractApi implements ApiInterface
      * In the event of an error, throw an exception.
      *
      * @param AbstractGrant $grant
-     * @param array $options
-     * @return AccessToken
+     * @param array         $options
+     *
      * @throws Exception
      * @throws MissingFieldException
+     *
+     * @return AccessToken
      */
     public function getAccessToken(AbstractGrant $grant = null, array $options = [])
     {
@@ -124,8 +126,9 @@ abstract class AbstractApi implements ApiInterface
     /**
      * Refresh the access token.
      *
-     * @return AccessToken
      * @throws Exception
+     *
+     * @return AccessToken
      */
     public function refreshToken()
     {
@@ -156,9 +159,11 @@ abstract class AbstractApi implements ApiInterface
      * Throws an exception if something goes wrong.
      *
      * @param string $method
-     * @param array $options
-     * @return mixed
+     * @param array  $options
+     *
      * @throws MissingFieldException
+     *
+     * @return mixed
      */
     public function get($method = 'GET', array $options = [])
     {

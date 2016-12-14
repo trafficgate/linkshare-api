@@ -106,6 +106,7 @@ class LinkLocator extends AbstractLinkshareApi
      * the LinkShare Advertiser ID for that advertiser.
      *
      * @param int $merchantId The LinkShare Advertiser ID
+     *
      * @return $this
      */
     public function merchantById($merchantId)
@@ -121,6 +122,7 @@ class LinkLocator extends AbstractLinkshareApi
      * Allows you to download an advertiser’s information by specifying the name of the advertiser.
      *
      * @param string $name The name of the advertiser. It must be an exact match.
+     *
      * @return $this
      */
     public function merchantByName($name)
@@ -139,6 +141,7 @@ class LinkLocator extends AbstractLinkshareApi
      * Programs section of the Publisher Dashboard.
      *
      * @param int $categoryId The category of the advertiser
+     *
      * @return $this
      */
     public function merchantByCategory($categoryId)
@@ -166,6 +169,7 @@ class LinkLocator extends AbstractLinkshareApi
      *   self removed
      *
      * @param string $status
+     *
      * @return $this
      */
     public function merchantByAppStatus($status)
@@ -184,6 +188,7 @@ class LinkLocator extends AbstractLinkshareApi
      * to filter the creative feeds to obtain links from one of these categories.
      *
      * @param int $merchantId This is the LinkShare Advertiser ID
+     *
      * @return $this
      */
     public function creativeCategories($merchantId)
@@ -201,24 +206,25 @@ class LinkLocator extends AbstractLinkshareApi
      * To specify the links your request returns, you can filter it using
      * these parameters: MID, Category, Start Date, and End Date.
      *
-     * @param int $merchantId This is the Rakuten LinkShare Advertiser ID.
-     *                        Optional, use -1 as the default value.
-     * @param int $categoryId This is the Creative Category ID.
-     *                        It is assigned by the advertiser. Use the Creative Category
-     *                        feed to obtain it (not the Advertiser Category Table listed
-     *                        in the Publisher Help Center).
-     *                        Optional, use -1 as the default value.
-     * @param Carbon|null $startDate This is the start date for the creative, formatted MMDDYYYY.
-     *                               Optional, use null as the default value.
-     * @param Carbon|null $endDate This is the end date for the creative, formatted MMDDYYYY.
-     *                             Optional, use null as the default value.
-     * @param int $campaignId Rakuten LinkShare retired this feature in August 2011.
-     *                        Please enter -1 as the default value.
-     * @param int $page This is the page number of the results.
-     *                  On queries with a large number of results, the system
-     *                  returns 10,000 results per page. This parameter helps
-     *                  you organize them.
-     *                  Optional, use 1 as a default value.
+     * @param int         $merchantId This is the Rakuten LinkShare Advertiser ID.
+     *                                Optional, use -1 as the default value.
+     * @param int         $categoryId This is the Creative Category ID.
+     *                                It is assigned by the advertiser. Use the Creative Category
+     *                                feed to obtain it (not the Advertiser Category Table listed
+     *                                in the Publisher Help Center).
+     *                                Optional, use -1 as the default value.
+     * @param Carbon|null $startDate  This is the start date for the creative, formatted MMDDYYYY.
+     *                                Optional, use null as the default value.
+     * @param Carbon|null $endDate    This is the end date for the creative, formatted MMDDYYYY.
+     *                                Optional, use null as the default value.
+     * @param int         $campaignId Rakuten LinkShare retired this feature in August 2011.
+     *                                Please enter -1 as the default value.
+     * @param int         $page       This is the page number of the results.
+     *                                On queries with a large number of results, the system
+     *                                returns 10,000 results per page. This parameter helps
+     *                                you organize them.
+     *                                Optional, use 1 as a default value.
+     *
      * @return $this
      */
     public function textLinks(
@@ -247,26 +253,27 @@ class LinkLocator extends AbstractLinkshareApi
      * To obtain specific banner links, you can filter this request using
      * these parameters: MID, Category, Size, Start Date, and End Date.
      *
-     * @param int $merchantId This is the Rakuten LinkShare Advertiser ID.
-     *                        Optional, use -1 as the default value.
-     * @param int $categoryId This is the Creative Category ID.
-     *                        It is assigned by the advertiser. Use the Creative Category
-     *                        feed to obtain it (not the Advertiser Category Table listed
-     *                        in the Publisher Help Center).
-     *                        Optional, use -1 as the default value.
-     * @param Carbon|null $startDate This is the start date for the creative, formatted MMDDYYYY.
-     *                               Optional, use null as the default value.
-     * @param Carbon|null $endDate This is the end date for the creative, formatted MMDDYYYY.
-     *                             Optional, use null as the default value.
-     * @param int $size This is the banner size code.
-     *                  Optional, use -1 as the default value.
-     * @param int $campaignId Rakuten LinkShare retired this feature in August 2011.
-     *                        Please enter -1 as the default value.
-     * @param int $page This is the page number of the results.
-     *                  On queries with a large number of results, the system
-     *                  returns 10,000 results per page. This parameter helps
-     *                  you organize them.
-     *                  Optional, use 1 as a default value.
+     * @param int         $merchantId This is the Rakuten LinkShare Advertiser ID.
+     *                                Optional, use -1 as the default value.
+     * @param int         $categoryId This is the Creative Category ID.
+     *                                It is assigned by the advertiser. Use the Creative Category
+     *                                feed to obtain it (not the Advertiser Category Table listed
+     *                                in the Publisher Help Center).
+     *                                Optional, use -1 as the default value.
+     * @param Carbon|null $startDate  This is the start date for the creative, formatted MMDDYYYY.
+     *                                Optional, use null as the default value.
+     * @param Carbon|null $endDate    This is the end date for the creative, formatted MMDDYYYY.
+     *                                Optional, use null as the default value.
+     * @param int         $size       This is the banner size code.
+     *                                Optional, use -1 as the default value.
+     * @param int         $campaignId Rakuten LinkShare retired this feature in August 2011.
+     *                                Please enter -1 as the default value.
+     * @param int         $page       This is the page number of the results.
+     *                                On queries with a large number of results, the system
+     *                                returns 10,000 results per page. This parameter helps
+     *                                you organize them.
+     *                                Optional, use 1 as a default value.
+     *
      * @return $this
      */
     public function bannerLinks(
@@ -297,24 +304,25 @@ class LinkLocator extends AbstractLinkshareApi
      * To obtain specific DRM links, you can filter it using these
      * parameters: MID, Category, Start Date, and End Date.
      *
-     * @param int $merchantId This is the Rakuten LinkShare Advertiser ID.
-     *                        Optional, use -1 as the default value.
-     * @param int $categoryId This is the Creative Category ID.
-     *                        It is assigned by the advertiser. Use the Creative Category
-     *                        feed to obtain it (not the Advertiser Category Table listed
-     *                        in the Publisher Help Center).
-     *                        Optional, use -1 as the default value.
-     * @param Carbon|null $startDate This is the start date for the creative, formatted MMDDYYYY.
-     *                               Optional, use null as the default value.
-     * @param Carbon|null $endDate This is the end date for the creative, formatted MMDDYYYY.
-     *                             Optional, use null as the default value.
-     * @param int $campaignId Rakuten LinkShare retired this feature in August 2011.
-     *                        Please enter -1 as the default value.
-     * @param int $page This is the page number of the results.
-     *                  On queries with a large number of results, the system
-     *                  returns 10,000 results per page. This parameter helps
-     *                  you organize them.
-     *                  Optional, use 1 as a default value.
+     * @param int         $merchantId This is the Rakuten LinkShare Advertiser ID.
+     *                                Optional, use -1 as the default value.
+     * @param int         $categoryId This is the Creative Category ID.
+     *                                It is assigned by the advertiser. Use the Creative Category
+     *                                feed to obtain it (not the Advertiser Category Table listed
+     *                                in the Publisher Help Center).
+     *                                Optional, use -1 as the default value.
+     * @param Carbon|null $startDate  This is the start date for the creative, formatted MMDDYYYY.
+     *                                Optional, use null as the default value.
+     * @param Carbon|null $endDate    This is the end date for the creative, formatted MMDDYYYY.
+     *                                Optional, use null as the default value.
+     * @param int         $campaignId Rakuten LinkShare retired this feature in August 2011.
+     *                                Please enter -1 as the default value.
+     * @param int         $page       This is the page number of the results.
+     *                                On queries with a large number of results, the system
+     *                                returns 10,000 results per page. This parameter helps
+     *                                you organize them.
+     *                                Optional, use 1 as a default value.
+     *
      * @return $this
      */
     public function drmLinks(
@@ -352,11 +360,12 @@ class LinkLocator extends AbstractLinkshareApi
      *                        Required..
      * @param int $campaignId Rakuten LinkShare retired this feature in August 2011.
      *                        Please enter -1 as the default value.
-     * @param int $page This is the page number of the results.
-     *                  On queries with a large number of results, the system
-     *                  returns 10,000 results per page. This parameter helps
-     *                  you organize them.
-     *                  Optional, use 1 as a default value.
+     * @param int $page       This is the page number of the results.
+     *                        On queries with a large number of results, the system
+     *                        returns 10,000 results per page. This parameter helps
+     *                        you organize them.
+     *                        Optional, use 1 as a default value.
+     *
      * @return $this
      */
     public function productLinks(

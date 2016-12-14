@@ -147,6 +147,7 @@ class Offer
      * Split an offer string into individual terms.
      *
      * @param string $terms
+     *
      * @return array
      */
     final private function splitOfferTerms($terms)
@@ -167,6 +168,7 @@ class Offer
      * Given an offer term, split it into individual parts for digestion.
      *
      * @param string $term
+     *
      * @return array
      */
     final private function matchOfferTerm($term)
@@ -194,6 +196,7 @@ class Offer
      * Validate a given value is a string or return null.
      *
      * @param mixed $value
+     *
      * @return string|null
      */
     final private function validateString($value)
@@ -211,6 +214,7 @@ class Offer
      * Validate a given value is a float or return null.
      *
      * @param mixed $value
+     *
      * @return float|null
      */
     final private function validateFloat($value)
@@ -228,6 +232,7 @@ class Offer
      * Validate a given value is boolean or return null.
      *
      * @param mixed $value
+     *
      * @return bool|null
      */
     final private function validateBool($value)

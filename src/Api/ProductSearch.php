@@ -84,8 +84,10 @@ class ProductSearch extends AbstractLinkshareApi
 
     /**
      * @see get()
+     *
      * @param string $method
-     * @param array $options
+     * @param array  $options
+     *
      * @return Result
      */
     public function search($method = 'GET', array $options = [])
@@ -98,8 +100,10 @@ class ProductSearch extends AbstractLinkshareApi
      *
      * @param string $keyword
      * @param string $searchMethod
-     * @return $this
+     *
      * @throws Exception
+     *
+     * @return $this
      */
     public function keyword($keyword, $searchMethod = self::API_PARAM_KEYWORD)
     {
@@ -124,6 +128,7 @@ class ProductSearch extends AbstractLinkshareApi
      * Specify the category parameter.
      *
      * @param string $category
+     *
      * @return $this
      */
     public function category($category)
@@ -135,6 +140,7 @@ class ProductSearch extends AbstractLinkshareApi
      * Specify the maximum results parameter.
      *
      * @param int $maximumResults
+     *
      * @return $this
      */
     public function maximumResults($maximumResults)
@@ -146,6 +152,7 @@ class ProductSearch extends AbstractLinkshareApi
      * Specify the page number parameter.
      *
      * @param int $pageNumber
+     *
      * @return $this
      */
     public function pageNumber($pageNumber)
@@ -157,6 +164,7 @@ class ProductSearch extends AbstractLinkshareApi
      * Specify the merchant ID parameter.
      *
      * @param int $merchantId
+     *
      * @return $this
      */
     public function merchantId($merchantId)
@@ -171,8 +179,10 @@ class ProductSearch extends AbstractLinkshareApi
      *
      * @param string $sortColumn
      * @param string $sortType
-     * @return $this
+     *
      * @throws Exception
+     *
+     * @return $this
      */
     public function sort($sortColumn, $sortType = self::SORT_TYPE_ASC)
     {
