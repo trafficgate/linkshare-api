@@ -74,7 +74,7 @@ abstract class AbstractApi implements ApiInterface
 
         $this->clientId     = $options['client_id'];
         $this->clientSecret = $options['client_secret'];
-        $this->timeout      = $options['timeout'] ?: 0;
+        $this->timeout      = (isset($options['timeout'])) ? $options['timeout'] : 0;
 
         $this->provider = $this->getProvider();
     }
