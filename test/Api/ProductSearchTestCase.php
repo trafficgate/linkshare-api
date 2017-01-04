@@ -1,6 +1,6 @@
 <?php
 
-namespace Linkshare\Test\Api;
+namespace Linkshare\Api;
 
 use Carbon\Carbon;
 use PHPUnit_Framework_TestCase;

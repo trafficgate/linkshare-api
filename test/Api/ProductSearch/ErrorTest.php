@@ -1,9 +1,9 @@
 <?php
 
-namespace Linkshare\Test\Api\ProductSearch;
+namespace Linkshare\Api\ProductSearch;
 
 use Linkshare\Api\ProductSearch\Error;
-use Linkshare\Test\Api\ProductSearchTestCase;
+use Linkshare\Api\ProductSearchTestCase;
 use SimpleXMLElement;
 use TypeError;
 

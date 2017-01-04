@@ -1,10 +1,10 @@
 <?php
 
-namespace Linkshare\Test\Api\LinkLocator;
+namespace Linkshare\Api\LinkLocator;
 
 use Linkshare\Api\LinkLocator\Fault;
 use Linkshare\Helpers\XMLHelper;
-use Linkshare\Test\Api\LinkLocatorTestCase;
+use Linkshare\Api\LinkLocatorTestCase;
 use SimpleXMLElement;
 use TypeError;
 

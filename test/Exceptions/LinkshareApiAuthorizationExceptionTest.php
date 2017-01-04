@@ -1,6 +1,6 @@
 <?php
 
-namespace Linkshare\Test\Exceptions;
+namespace Linkshare\Exceptions;
 
 use Linkshare\Exceptions\LinkshareApiAuthorizationException;
 use PHPUnit_Framework_TestCase;

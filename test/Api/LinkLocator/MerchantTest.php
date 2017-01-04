@@ -1,8 +1,8 @@
 <?php
 
-namespace Linkshare\Test\Api\LinkLocator;
+namespace Linkshare\Api\LinkLocator;
 
-use Linkshare\Test\Api\LinkLocatorTestCase;
+use Linkshare\Api\LinkLocatorTestCase;
 
 class MerchantTest extends LinkLocatorTestCase
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Linkshare\Test\Api;
+namespace Linkshare\Api;
 
 class LinkLocatorTest extends LinkLocatorTestCase
 {

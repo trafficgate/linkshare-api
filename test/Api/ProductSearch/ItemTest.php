@@ -3,7 +3,7 @@
 namespace Linkshare\Test\Api\ProductSearch;
 
 use Linkshare\Api\ProductSearch\Item;
-use Linkshare\Test\Api\ProductSearchTestCase;
+use Linkshare\Api\ProductSearchTestCase;
 use SimpleXMLElement;
 
 class ItemTest extends ProductSearchTestCase
