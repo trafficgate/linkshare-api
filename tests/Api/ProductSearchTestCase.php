@@ -3,6 +3,7 @@
 namespace Linkshare\Api;
 
 use Carbon\Carbon;
+use Linkshare\Api\ProductSearch\Item;
 use PHPUnit_Framework_TestCase;
 
 class ProductSearchTestCase extends PHPUnit_Framework_TestCase
@@ -25,7 +26,7 @@ class ProductSearchTestCase extends PHPUnit_Framework_TestCase
                 'merchant_id'          => 1,
                 'merchant_name'        => 'test_merchant_1',
                 'link_id'              => 1,
-                'created_on'           => Carbon::now(),
+                'created_on'           => Carbon::createFromFormat(Item::DATE_FORMAT, '2017-01-01/00:00:00'),
                 'sku'                  => 'test_sku_1',
                 'product_name'         => 'test_product_1',
                 'primary_categories'   => ['test_primary_category_1', 'test_primary_category_2'],
@@ -45,7 +46,7 @@ class ProductSearchTestCase extends PHPUnit_Framework_TestCase
                 'merchant_id'          => 2,
                 'merchant_name'        => 'test_merchant_2',
                 'link_id'              => 2,
-                'created_on'           => Carbon::now(),
+                'created_on'           => Carbon::createFromFormat(Item::DATE_FORMAT, '2017-01-01/00:00:00'),
                 'sku'                  => 'test_sku_2',
                 'product_name'         => 'test_product_2',
                 'primary_categories'   => ['test_primary_category_1', 'test_primary_category_2'],
@@ -89,7 +90,7 @@ class ProductSearchTestCase extends PHPUnit_Framework_TestCase
                 "<mid>{$item['merchant_id']}</mid>".
                 "<merchantname>{$item['merchant_name']}</merchantname>".
                 "<linkid>{$item['link_id']}</linkid>".
-                '<createdon>'.$item['created_on']->format('Y-m-d/H:i:s').'</createdon>'.
+                '<createdon>'.$item['created_on']->format(Item::DATE_FORMAT).'</createdon>'.
                 "<sku>{$item['sku']}</sku>".
                 "<productname>{$item['product_name']}</productname>".
                 '<category>'.
