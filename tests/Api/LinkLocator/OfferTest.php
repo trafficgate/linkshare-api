@@ -1,10 +1,9 @@
 <?php
 
-namespace Linkshare\Test\Api\LinkLocator;
+namespace Linkshare\Api\LinkLocator;
 
-use Linkshare\Api\LinkLocator\Offer;
+use Linkshare\Api\LinkLocatorTestCase;
 use Linkshare\Helpers\XMLHelper;
-use Linkshare\Test\Api\LinkLocatorTestCase;
 use SimpleXMLElement;
 
 class OfferTest extends LinkLocatorTestCase

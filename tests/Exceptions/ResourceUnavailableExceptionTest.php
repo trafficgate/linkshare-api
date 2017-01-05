@@ -1,8 +1,7 @@
 <?php
 
-namespace Linkshare\Test\Exceptions;
+namespace Linkshare\Exceptions;
 
-use Linkshare\Exceptions\ResourceUnavailableException;
 use PHPUnit_Framework_TestCase;
 use TypeError;
 
@@ -28,6 +27,7 @@ class ResourceUnavailableExceptionTest extends PHPUnit_Framework_TestCase
     }
 
     /**
+     * @requires PHP 7.0
      * @expectedException TypeError
      */
     public function testCreateNewExceptionWithNull()
