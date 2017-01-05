@@ -2,7 +2,6 @@
 
 namespace Linkshare\Exceptions;
 
-use Linkshare\Exceptions\ResourceUnavailableException;
 use PHPUnit_Framework_TestCase;
 use TypeError;
 

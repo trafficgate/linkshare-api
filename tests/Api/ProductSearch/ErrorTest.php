@@ -2,7 +2,6 @@
 
 namespace Linkshare\Api\ProductSearch;
 
-use Linkshare\Api\ProductSearch\Error;
 use Linkshare\Api\ProductSearchTestCase;
 use SimpleXMLElement;
 use TypeError;

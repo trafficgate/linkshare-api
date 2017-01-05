@@ -2,9 +2,8 @@
 
 namespace Linkshare\Api\LinkLocator;
 
-use Linkshare\Api\LinkLocator\Fault;
-use Linkshare\Helpers\XMLHelper;
 use Linkshare\Api\LinkLocatorTestCase;
+use Linkshare\Helpers\XMLHelper;
 use SimpleXMLElement;
 use TypeError;
 

@@ -2,9 +2,8 @@
 
 namespace Linkshare\Api\LinkLocator;
 
-use Linkshare\Api\LinkLocator\Offer;
-use Linkshare\Helpers\XMLHelper;
 use Linkshare\Api\LinkLocatorTestCase;
+use Linkshare\Helpers\XMLHelper;
 use SimpleXMLElement;
 
 class OfferTest extends LinkLocatorTestCase

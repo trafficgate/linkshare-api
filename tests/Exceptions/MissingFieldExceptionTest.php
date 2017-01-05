@@ -2,7 +2,6 @@
 
 namespace Linkshare\Exceptions;
 
-use Linkshare\Exceptions\MissingFieldException;
 use PHPUnit_Framework_TestCase;
 
 class MissingFieldExceptionTest extends PHPUnit_Framework_TestCase
