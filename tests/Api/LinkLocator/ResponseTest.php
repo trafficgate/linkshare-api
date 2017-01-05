@@ -6,8 +6,8 @@ use Linkshare\Api\LinkLocatorTestCase;
 
 class ResponseTest extends LinkLocatorTestCase
 {
-    public function testNothing()
+    public function testStub()
     {
-        $this->markTestIncomplete('Not yet implemented.');
+        $this->markTestIncomplete('Please give me tests!');
     }
 }

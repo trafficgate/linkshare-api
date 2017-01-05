@@ -4,8 +4,8 @@ namespace Linkshare\Api;
 
 class ProductSearchTest extends ProductSearchTestCase
 {
-    public function testNothing()
+    public function testStub()
     {
-        $this->markTestIncomplete('Not yet implemented.');
+        $this->markTestIncomplete('Please give me tests!');
     }
 }
