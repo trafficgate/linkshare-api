@@ -5,7 +5,7 @@
 [![Build Status](https://img.shields.io/travis/trafficgate/linkshare-api/master.svg?style=flat-square)](https://travis-ci.org/trafficgate/linkshare-api)
 [![SensioLabsInsight](https://img.shields.io/sensiolabs/i/e776b67b-6cdd-49dd-8ea8-ffc0d0b68511.svg?style=flat-square)](https://insight.sensiolabs.com/projects/e776b67b-6cdd-49dd-8ea8-ffc0d0b68511)
 [![StyleCI](https://styleci.io/repos/69539191/shield?branch=master)](https://styleci.io/repos/69539191)
-[![Total Downloads](https://img.shields.io/packagist/dt/trafficgate/linkshare-api.svg?style=flat-square)](https://packagist.org/packages/trafficgate/linkshare-api)
+[![Total Downloads](https://img.shields.io/packagist/dt/linkshare/linkshare-api.svg?style=flat-square)](https://packagist.org/packages/linkshare/linkshare-api)
 
 API clients for consuming LinkShare developer APIs.
 
