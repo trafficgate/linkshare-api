@@ -14,8 +14,8 @@ class ResourceUnavailableException extends Exception
     /**
      * ResourceUnavailableException constructor.
      *
-     * @param array $json
-     * @param int $code
+     * @param array          $json
+     * @param int            $code
      * @param Exception|null $previous
      */
     public function __construct(array $json, $code = 0, Exception $previous = null)
@@ -24,7 +24,7 @@ class ResourceUnavailableException extends Exception
             $message = self::INVALID_JSON.' '.static::FAULT_INDEX_MISSING;
 
             return parent::__construct($message, $code, $previous);
-        };
+        }
 
         $fault = $json['fault'];
 
@@ -38,6 +38,7 @@ class ResourceUnavailableException extends Exception
      * Validate the given json input.
      *
      * @param array $json
+     *
      * @return bool
      */
     protected function validateJson(array $json)
@@ -55,6 +56,7 @@ class ResourceUnavailableException extends Exception
      * Process the exception message.
      *
      * @param array $fault
+     *
      * @return string
      */
     protected function processMessage(array $fault)
@@ -80,7 +82,8 @@ class ResourceUnavailableException extends Exception
      * Process the exception code.
      *
      * @param array $fault
-     * @param int $code
+     * @param int   $code
+     *
      * @return int
      */
     protected function processCode(array $fault, $code)

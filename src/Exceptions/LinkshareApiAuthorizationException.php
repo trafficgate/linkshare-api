@@ -15,8 +15,8 @@ class LinkshareApiAuthorizationException extends Exception
      * LinkshareApiAuthorizationException constructor.
      *
      * @param SimpleXMLElement|SimpleXMLElement[] $xml
-     * @param int $code
-     * @param Exception|null $previous
+     * @param int                                 $code
+     * @param Exception|null                      $previous
      */
     public function __construct(SimpleXMLElement $xml, $code = 0, Exception $previous = null)
     {
@@ -30,6 +30,7 @@ class LinkshareApiAuthorizationException extends Exception
      * Process the exception message.
      *
      * @param SimpleXMLElement|SimpleXMLElement[] $xml
+     *
      * @return string
      */
     protected function processMessage(SimpleXMLElement $xml)
@@ -56,6 +57,7 @@ class LinkshareApiAuthorizationException extends Exception
      *
      * @param SimpleXMLElement|SimpleXMLElement[] $xml
      * @param $code
+     *
      * @return int
      */
     protected function processCode(SimpleXMLElement $xml, $code)

@@ -11,8 +11,8 @@ class MissingFieldException extends Exception
     /**
      * MissingFieldException constructor.
      *
-     * @param array|string $fields
-     * @param int $code
+     * @param array|string   $fields
+     * @param int            $code
      * @param Exception|null $previous
      */
     public function __construct($fields, $code = 0, Exception $previous = null)
@@ -25,6 +25,7 @@ class MissingFieldException extends Exception
      * Generate message.
      *
      * @param array|string $fields
+     *
      * @return string
      */
     private function processMessage($fields)

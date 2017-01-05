@@ -54,6 +54,7 @@ makeRequest(
  * Load access token from path.
  *
  * @param string $path
+ *
  * @return AccessToken|null
  */
 function loadAccessToken($path)
@@ -74,7 +75,7 @@ function loadAccessToken($path)
  * Save access token to path.
  *
  * @param AccessToken $accessToken
- * @param string $path
+ * @param string      $path
  */
 function saveAccessToken(AccessToken $accessToken, $path)
 {
@@ -89,9 +90,10 @@ function saveAccessToken(AccessToken $accessToken, $path)
  * Make an API request and optionally wait before the next call.
  *
  * @param AbstractApi $provider
- * @param Callable $callable
- * @param string $accessTokenPath
- * @param int $requestsPerMinute
+ * @param callable    $callable
+ * @param string      $accessTokenPath
+ * @param int         $requestsPerMinute
+ *
  * @throws Exception
  */
 function makeRequest(AbstractApi $provider, callable $callable, $requestsPerMinute = 0, $accessTokenPath = 'access_token')
@@ -136,6 +138,7 @@ function makeRequest(AbstractApi $provider, callable $callable, $requestsPerMinu
  * Determine the wait time between API calls.
  *
  * @param int $requestsPerMinute
+ *
  * @return float
  */
 function getWaitTime($requestsPerMinute)
