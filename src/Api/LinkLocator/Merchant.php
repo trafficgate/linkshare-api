@@ -180,4 +180,18 @@ final class Merchant
 
         $this->offer = new Offer($xmlElement->offer);
     }
+
+    final public function __toString()
+    {
+        $columnFormat = '%-23s %s'.PHP_EOL;
+
+        $s = '';
+        $s .= sprintf($columnFormat, 'Merchant ID', $this->id());
+        $s .= sprintf($columnFormat, 'Merchant Name', $this->name());
+        $s .= sprintf($columnFormat, 'Application Status', $this->applicationStatus());
+        $s .= sprintf($columnFormat, 'Categories', implode(', ', $this->categories()));
+        $s .= (string) $this->offer();
+
+        return $s;
+    }
 }

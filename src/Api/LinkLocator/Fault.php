@@ -86,4 +86,9 @@ final class Fault
 
         $this->message = trim($xmlElement->detail->linklocfault->message);
     }
+
+    final public function __toString()
+    {
+        return 'Error from API: [Fault '.$this->fault().'] '.$this->message();
+    }
 }
