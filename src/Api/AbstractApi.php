@@ -3,6 +3,7 @@
 namespace Linkshare\Api;
 
 use Exception;
+use GuzzleHttp\Psr7\Response as GuzzleHttpResponse;
 use InvalidArgumentException;
 use League\OAuth2\Client\Grant\AbstractGrant;
 use League\OAuth2\Client\Provider\AbstractProvider;
@@ -174,6 +175,10 @@ abstract class AbstractApi implements ApiInterface
         // to Psr\Http\Message\RequestInterface.
         $request  = $this->provider->getAuthenticatedRequest($method, $this->getApiUrl(), $accessToken, $options);
         $response = $this->provider->getResponse($request);
+
+        if ($response instanceof GuzzleHttpResponse) {
+            $response = (string) $response->getBody();
+        }
 
         return $response;
     }
