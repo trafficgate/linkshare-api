@@ -293,4 +293,25 @@ class Offer
 
         $this->name = trim($xmlElement->offername);
     }
+
+    final public function __toString()
+    {
+        $columnFormat = '%-23s %s'.PHP_EOL;
+
+        $s = '';
+        $s .= sprintf($columnFormat, 'Offer ID', $this->id());
+        $s .= sprintf($columnFormat, 'Offer name', $this->name());
+        $s .= sprintf($columnFormat, 'Offer secondary name', $this->alsoName());
+        foreach ($this->commissionTerms() as $commissionType => $commissionTerms) {
+            $s .= sprintf($columnFormat, 'Offer Type', $commissionType);
+            foreach ($commissionTerms as $commissionTerm) {
+                $s .= sprintf($columnFormat, 'Offer lower bound', $commissionTerm['lower_bound']);
+                $s .= sprintf($columnFormat, 'Offer upper bound', $commissionTerm['upper_bound']);
+                $s .= sprintf($columnFormat, 'Offer amount', $commissionTerm['amount']);
+                $s .= sprintf($columnFormat, 'Offer is percentage?', $commissionTerm['is_percentage'] ? 'yes' : 'no');
+            }
+        }
+
+        return $s;
+    }
 }

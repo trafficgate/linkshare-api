@@ -97,4 +97,19 @@ final class Response
             $this->merchants[] = new Merchant($merchant);
         }
     }
+
+    final public function __toString()
+    {
+        if ($this->fault) {
+            return $this->fault->__toString();
+        }
+
+        $s = '';
+
+        foreach ($this->merchants() as $merchant) {
+            $s .= (string) $merchant;
+        }
+
+        return $s;
+    }
 }
