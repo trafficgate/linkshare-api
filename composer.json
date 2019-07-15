@@ -19,7 +19,7 @@
   "require": {
     "php": ">=5.6",
     "linkshare/oauth2-linkshare": "~1.0",
-    "nesbot/carbon": "~1.21"
+    "nesbot/carbon": "~2.21"
   },
   "require-dev": {
     "fabpot/php-cs-fixer": "~1.11",
